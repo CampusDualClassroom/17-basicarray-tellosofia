@@ -1,27 +1,23 @@
-# Ejercicio - Clases y métodos abstractos
+# Ejercicio - Arrays
 ## Descripción del ejercicio
-Se deberá completar una clase proporcionada que extiende de otra clase abstracta dada. La clase hija deberá implementar el método o métodos
-de la clase abstracta que sean necesarios.
+Se realizarán ejemplos de creación e inicialización de un array; de la asignación de un valor a un índice concreto de un array creado; de 
+obtención de la extensión de un array, y de obtención del valor de un índice concreto de un array.
 
 ### Objetivos
-* Dada la clase ``FreshMerchandise`` y la clase abstracta ``Merchandise`` de la que hereda, implementar en la clase ``FreshMerchadise`` el
-  método ``getSpecificData()`` de la clase abstracta para que devuelva un *String* con los datos de una mercancía.
-* Crear un método llamado ``printSpecificData()`` que invoque al método ``getSpecificData()`` e imprima por pantalla el *String* que
-  devuelve.
+* Completar el método ``createEmptyIntArray()`` que reciba por parámetro un número entero y devuelva un array de tipo *int*, solamente 
+  creado, pero no inicializado (*sin valores asignados a cada posición*), con tantos elementos como indique el parámetro.
+* Completar el método ``createInitializedStringArray()``  para crear y devolver un sencillo array de tipo *String* de 3 elementos.
+* Completar el método ``populateArray()``, que recibe por parámetro un array de tipo entero, un índice y un valor, para asignar dicho valor 
+  al índice especificado de dicho array.
+* Completar el método ``arrayLength()``, que recibe por parámetro un array de tipo entero y devuelve su tamaño.
+* Completar el método ``showValue()``, que recibe por parámetro un array de tipo entero y un índice, y muestra por pantalla el valor de ese 
+  índice del array.
 
-
-### Métodos a implementar
-El método ``getSpecificData()`` devuelve un *String* compuesto por elementos que deben mostrar la siguiente información:
-* La localización, y un texto previo que indique que se mostrará tal dato
-* La caducidad, correctamente formateada, y un texto previo que indique que se mostrará ese dato
-
-Para crear el *String* se puede usar una composición básica *"texto" + elemento + "texto" ...* o bien se puede investigar el uso de la
-clase [StringBuilder](https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html) y su método ``append()`` (*observar
-el método ``getLocation()`` de la clase ``Merchandise``*).
-
-Es importante que la propiedad de la fecha de caducidad ``expirationDate`` de la clase ``FreshMerchadise`` sea de tipo Date. Y que
-al ser mostrada por pantalla se utilice el formato *dd-MM-yyyy*. Para ello será necesario la utilización de un formateador, como por
-ejemplo la clase [SimpleDateFormat](https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html) y su método ``format()``
+### Elementos del array
+Todos los array generados serán de tipo *int*, a excepción del array generado en el método ``createInitializedStringArray()``, que será 
+de tipo *String*, pero cada elemento será un número convertido a cadena.
+El ``main()`` que se proporciona ya cubierto se encargará de ir invocando a cada método y funcionalidad. Revisar cuando muestre por consola 
+que los resultados esperados son correctos. 
 
 ### Requisitos
 * No se pueden modificar en absoluto las clases de test.
