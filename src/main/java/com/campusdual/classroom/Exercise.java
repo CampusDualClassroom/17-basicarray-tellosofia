@@ -1,15 +1,28 @@
 package com.campusdual.classroom;
 
+import java.util.Arrays;
+
 public class Exercise {
-    public static int[] createEmptyIntArray(int positions) {}
+    public static int[] createEmptyIntArray(int positions) {
+        return new int[positions];
+    }
 
-    public static String[] createInitializedStringArray() {}
+    public static String[] createInitializedStringArray() {
+        return new String[]{"1", "2", "3"};
+    }
 
-    public static void populateArray(int[] array, int index, int value) {}
+    public static void populateArray(int[] array, int index, int value) {
+        array[index] = value;
+        System.out.println(value + " was assigned on index " + index);
+    }
 
-    public static int arrayLength(int[] array) {}
+    public static int arrayLength(int[] array) {
+        return array.length;
+    }
 
-    public static void showValue(int[] array, int index) {}
+    public static void showValue(int[] array, int index) {
+        System.out.println(array[index]);
+    }
 
     public static void main(String[] args) {
         int[] intArray = createEmptyIntArray(3);
@@ -19,5 +32,6 @@ public class Exercise {
         populateArray(intArray, 2, 8);
         showValue(intArray, 0);
         System.out.println(arrayLength(intArray));
+        System.out.println(Arrays.toString(stringArray));
     }
 }
